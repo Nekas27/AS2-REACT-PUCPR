@@ -29,12 +29,12 @@
 }
 
 .react {
-  color: #61dafb; /* Cor azul do React */
+  color: #61dafb; 
   font-weight: bold;
 }
 
 .firebase {
-  color: #ffcb2d; /* Cor laranja do Firebase */
+  color: #ffcb2d; 
   font-weight: bold;
 }
 
