@@ -18,11 +18,10 @@ const AddUser = () => {
     setSuccess("");
 
     try {
-      // Cria o usuário no Firebase Authentication
       const userCredential = await createUserWithEmailAndPassword(auth, email, senha);
       const user = userCredential.user;
 
-      // Cria o documento no Firestore com dados adicionais
+     
       await setDoc(doc(db, "usuarios", user.uid), {
         nome: nome,
         sobrenome: sobrenome,
