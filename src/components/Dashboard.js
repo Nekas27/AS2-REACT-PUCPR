@@ -1,4 +1,3 @@
-// src/components/Dashboard.js
 import React, { useEffect, useState } from "react";
 import { auth, db } from "../firebase/FirebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
