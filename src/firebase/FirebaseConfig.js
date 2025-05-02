@@ -1,9 +1,7 @@
-// Importa as funções que você precisa do SDK do Firebase
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";  // Para autenticação
 import { getFirestore } from "firebase/firestore";  // Para Firestore
 
-// Configuração do seu app Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyDkGqsjJfiSNdgJIYSXdkxidgyRyRnJsqA",
   authDomain: "projetinhoreact.firebaseapp.com",
@@ -14,13 +12,10 @@ const firebaseConfig = {
   measurementId: "G-MEPYDR0N1X"
 };
 
-// Inicializa o Firebase
 const app = initializeApp(firebaseConfig);
 
-// Configuração do Firebase Auth (para login e cadastro de usuários)
 const auth = getAuth(app);
 
-// Configuração do Firestore (para armazenar os dados do usuário)
 const db = getFirestore(app);
 
 export { auth, db };
