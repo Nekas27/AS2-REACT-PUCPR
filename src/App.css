@@ -28,6 +28,16 @@
   color: #61dafb;
 }
 
+.react {
+  color: #61dafb; /* Cor azul do React */
+  font-weight: bold;
+}
+
+.firebase {
+  color: #ffcb2d; /* Cor laranja do Firebase */
+  font-weight: bold;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
