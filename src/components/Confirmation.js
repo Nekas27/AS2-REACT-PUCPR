@@ -1,16 +1,15 @@
-// src/components/Confirmation.js
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../firebase/FirebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom"; // Para redirecionamento
+import { useNavigate } from "react-router-dom"; 
 
 const Confirmation = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate(); // Hook para navegação
+  const navigate = useNavigate(); 
 
   const handleValidation = async (e) => {
     e.preventDefault();
@@ -18,11 +17,10 @@ const Confirmation = () => {
     setLoading(true);
 
     try {
-      // Autenticar usuário pelo Firebase Authentication
-      const userCredential = await signInWithEmailAndPassword(auth, email, senha);
+     const userCredential = await signInWithEmailAndPassword(auth, email, senha);
       const user = userCredential.user;
 
-      // Buscar dados adicionais do usuário no Firestore
+   
       const userDocRef = doc(db, "usuarios", user.uid);
       const userDoc = await getDoc(userDocRef);
 
