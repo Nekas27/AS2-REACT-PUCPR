@@ -1,4 +1,3 @@
-// src/components/FirestoreComponent.js
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase/FirebaseConfig"; // Importando o Firestore
 import { collection, getDocs } from "firebase/firestore";
@@ -8,7 +7,7 @@ const FirestoreComponent = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const querySnapshot = await getDocs(collection(db, "usuarios")); // Alterei para "usuarios" ao invés de "users"
+      const querySnapshot = await getDocs(collection(db, "usuarios")); 
       const usersList = querySnapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data(),
